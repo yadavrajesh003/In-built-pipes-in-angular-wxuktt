@@ -1,0 +1,36 @@
+<h2>{{ title }}</h2>
+<h3>Date</h3>
+<p>Medium format: {{ toDate | date:'medium' }}</p>
+<p>Short format: {{ toDate | date:'short' }}</p>
+<p>dd-MM-y format: {{ toDate | date:'dd-MM-y' }}</p>
+<p>dd-MM-yy HH:mm format: {{ toDate | date:'dd-MM-yy HH:mm' }}</p>
+<hr/>
+<h3>Currency</h3>   
+  <p>{{ itemPrice | currency:'USD':true }}</p>  
+   <p>{{ itemPrice | currency:'INR':true }}</p>   
+<hr/>
+   <h3>Slice</h3>
+   <ul>
+  <li *ngFor="let users of Users | slice:2">
+    {{ users }}
+  </li>
+</ul>
+<hr/>
+
+<h3>Decimal</h3>
+ <p> {{myNum1 | number}} </p>
+ <p> {{myNum2 | number:'3.0-2'}} </p>
+<hr/>
+      <h3>LowerCase & UpperCase</h3>
+	      <p> {{convertText | lowercase}} </p>
+        <p> {{convertText | uppercase}}  </p>
+        <hr/>
+<h3>Percent</h3>
+        <!--output '35%'-->
+        <p>A: {{numA | percent}}</p>    
+        <!--output '0,245.950%'-->
+        <p>B: {{numB | percent:'4.3-5'}}</p>
+
+        <h3>JSON</h3>
+       <p> {{ objectName | json }} </p>
+<hr/>
